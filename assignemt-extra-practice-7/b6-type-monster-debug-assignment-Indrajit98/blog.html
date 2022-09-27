@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <section class="container mx-auto sm:my-20 my-3">
+        <div>
+            <h1 class="sm:text-3xl text-xl sm:py-5 font-semibold px-3"><span>1. </span> Difference Between Local
+                Storage, Session Storage </h1>
+            <p class="leading-7 sm:text-xl py-5 px-3"><strong>Local Storage:</strong> This read-only interface property
+                provides access to the Document’s local
+                storage object,
+                the stored data is stored across browser sessions. Similar to sessionStorage, except that localStorage
+                data gets cleared when the page session ends – that is when the page is closed. It is cleared when the
+                last “private” tab of a browser is closed (localStorage data for a document loaded in a private browsing
+                or incognito session).
+
+                DOMStrings are storage formats that use UTF-16 to encode data, which uses two bytes per character.
+                Strings are automatically generated from integer keys just as they are for objects. The data stored in
+                LocalStorage is specific to a protocol in the document. If the site is loaded over HTTP (e.g.,
+                http://example.com), localStorage returns a different object than if it is loaded over HTTPS (e.g.,
+                https://abc.com).
+
+                If a document is loaded from a file: URL (that is, directly from the user’s local file system instead of
+                being loaded from the server) the requirements for behavior are undefined and may vary among different
+                browsers. Each file appears to be returned a different object by localStorage in all current browsers:
+                URL. Essentially, it seems to be a case of each URL: file having its own unique local storage area.
+
+                This behavior cannot be guaranteed because as mentioned above, the file: URL requirements remain
+                unclear. As such, there’s a possibility that browsers may change how they handle files at any time. The
+                way some browsers handle it has evolved. </p>
+            <p class="leading-7 sm:text-xl px-3">
+                <strong>Session Storage</strong> objects can be accessed using the sessionStorage read-only property.
+                The difference
+                between sessionStorage and localStorage is that localStorage data does not expire, whereas
+                sessionStorage data is cleared when the page session ends.
+
+                A unique page session gets created once a document is loaded in a browser tab. Page sessions are valid
+                for only one tab at a time. Pages are only saved for the amount of time that the tab or the browser is
+                open; they do not persist after the page reloads and restores. A new session is created each time a tab
+                or window is opened; this is different from session cookies. Each tab/window that is opened with the
+                same URL creates its own sessionStorage.When you duplicate a tab, the sessionStorage from the original
+                tab is copied to the duplicated tab. Closing a window/tab ends the session and clears sessionStorage
+                objects.
+
+                A page’s protocol determines what data is stored in sessionStorage. Particularly, data stored by scripts
+                accessed through HTTP (for example, http://abc.com) is stored in a separate object from the same site
+                accessed through HTTPS (for instance, https://abc.com). A DOMString number is two bytes per character in
+                UTF-16 DOMString format. Strings are automatically generated from integer keys just as they are for
+                objects.
+            </p>
+        </div>
+        <br>
+        <div>
+            <h1 class="sm:text-3xl py-5 px-3 font-semibold"><span>2. </span>Difference Between Global scope and Block
+                scope</h1>
+            <p class="leading-7 sm:text-xl px-3"> In contrast to global variables, locally scoped ones are only visible
+                within the function they are
+                declared. Each function written in JavaScript creates a new local scope and every variable declared in
+                this scope is a local variable. That means that variables with the same name can be used in different
+                functions. However, any effort to reference a local variable outside its scope will result in a
+                Reference Error:</p>
+            <p class="leading-7 sm:text-xl px-3">A variable exists inside or outside a block. If a variable is declared
+                outside all functions or curly
+                braces ({}), it exists in the global scope. The global variables can be accessed by any line of code in
+                the program, including inside blocks.</p>
+
+        </div>
+        <div>
+            <h1 class="sm:text-3xl py-5 px-3 font-semibold"><span>3. </span>How does JS event loop work?</h1>
+            <p class="leading-7 sm:text-xl px-3">The Event Loop has one simple job — to monitor the Call Stack and the Callback Queue. If the Call Stack
+                is empty, the Event Loop will take the first event from the queue and will push it to the Call Stack,
+                which effectively runs it. Such an iteration is called a tick in the Event Loop.</p>
+        </div>
+        <div>
+            <h1 class="sm:text-3xl py-5 px-3 font-semibold"><span>4. </span>Undefined Error</h1>
+            <p class="leading-7 sm:text-xl px-3">
+                undefined is a property of the global object. That is, it is a variable in global scope. The initial
+                value of undefined is the primitive value undefined.
+
+                In all non-legacy browsers, undefined is a non-configurable, non-writable property. (Even when this is
+                not the case, avoid overriding it.)
+
+                A variable that has not been assigned a value is of type undefined. A method or statement also returns
+                undefined if the variable that is being evaluated does not have an assigned value. A function returns
+                undefined if a value was not returned.
+            </p>
+        </div>
+
+    </section>
+</body>
+
+</html>
