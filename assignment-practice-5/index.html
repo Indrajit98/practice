@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>money master</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    },
+                    backgroundImage: {
+                        image: "url('image/Pexels Photo by Karolina Grabowska.png')",
+                    },
+                    height: {
+                        "500": '500px',
+                    }
+
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1 class="text text-center mt-8 text-5xl">Money Master</h1>
+    </header>
+    <main>
+        <section>
+            <div class="grid grid-cols-2 gap-5 container mx-auto py-8">
+                <div class="mt-12 bg-image bg-cover  bg-bottom  ">
+                
+                </div>
+                <div class="bg-slate-200 p-8 mt-12">
+                    <h3 class="text-center my-3 font-medium text-2xl">Income</h3>
+
+                    <div class="m-4 ">
+                        <label for="income-input">Income</label>
+                        <input type="text" class="border ml-2 p-1 rounded" id="income-input">
+                    </div>
+
+                    <h3 class="text-center pb-2 font-medium text-2xl">Expenses</h3>
+
+
+                    <div class="m-2 ">
+                        <label for="food-input">Food:</label>
+                        <input type="text" class="border ml-2 p-1 rounded" id="food-input">
+                    </div>
+
+                    <div class="m-2">
+                        <label for="">Rent:</label>
+                        <input type="text" class="border ml-2 p-1 rounded" id="rent-input">
+
+                    </div>
+                    <div class="m-2">
+                        <label for="">Clothes:</label>
+                        <input type="text" class="border ml-2 p-1 rounded" id="clothes-input">
+                    </div>
+
+                    <button class="bg-sky-600 py-2 px-4 rounded m-5 flex mx-auto text-white" id="btn-expenses-calculate">Calculate</button>
+
+                    <h3 class="text-center my-4 font-medium">Total Expenses:<span id="total-expenses-text"> 00</span></h3>
+                    <h3 class="text-center my-4 font-medium">Balance: <span id="balance-text"> 00</span></h3>
+
+                    <div class="flex items-center">
+                        <h4 class=" ml-4 mr-2">Save</h4>
+                        <input type="text" class="  p-1 rounded mr-4 w-100" id="saving-input"> <span>%</span>
+                        <button class="bg-sky-600 py-1 px-6 ml-4 rounded text-white" id="btn-save">Save</button>
+                    </div>
+                    <h3 class="text-center mt-8 mb-2 font-medium">Saving Amount: <span id="saving-text"> 00</span></h3>
+                    <h3 class="text-center font-medium ">Remaining Balance: <span id="remaining-text"> 00</span></h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/income.js"></script>
+
+</body>
+
+</html>
